@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="d-flex">
+        <input type="date" [(ngModel)]="date" class="form-control" />
+        <button (click)="getSummary()" class="btn btn-primary mx-3">Get Call Summary</button>
+    </div>
+    <div *ngIf="isLoading" class="alert alert-info">Loading...</div>
+    <div *ngIf="summary" class="summary">
+        <h3>Summary for {{summary.summaryDate}}</h3>
+        <p>Total Calls: {{summary.totalCalls}}</p>
+        <p>Total Duration: {{summary.totalDurationInSeconds}}</p>
+        <p>Average Duration: {{summary.avgDurationInSeconds}}</p>
+        <div *ngFor="let hour of summary.hours; let index = index" class="hour-summary card mb-3">
+            <h4 class="card-title">{{hour.beginning}}</h4>
+            <p class="card-text">Total Calls: {{hour.totalCalls}}</p>
+            <p class="card-text">Total Duration: {{hour.totalDurationInSeconds}}</p>
+            <p class="card-text">Average Duration: {{hour.avgDurationInSeconds}}</p>
+        </div>
+    </div>
+</div>
