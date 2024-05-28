@@ -7,13 +7,13 @@
     <div *ngIf="summary" class="summary">
         <h3>Summary for {{summary.summaryDate}}</h3>
         <p>Total Calls: {{summary.totalCalls}}</p>
-        <p>Total Duration: {{summary.totalDurationInSeconds}}</p>
-        <p>Average Duration: {{summary.avgDurationInSeconds}}</p>
+        <p>Total Duration (in seconds): {{summary.totalDurationInSeconds}}</p>
+        <p>Average Duration (in seconds): {{summary.avgDurationInSeconds}}</p>
         <div *ngFor="let hour of summary.hours; let index = index" class="hour-summary card mb-3">
             <h4 class="card-title">{{hour.beginning}}</h4>
             <p class="card-text">Total Calls: {{hour.totalCalls}}</p>
-            <p class="card-text">Total Duration: {{hour.totalDurationInSeconds}}</p>
-            <p class="card-text">Average Duration: {{hour.avgDurationInSeconds}}</p>
+            <p class="card-text">Total Duration (in seconds): {{hour.totalDurationInSeconds}}</p>
+            <p class="card-text">Average Duration (in seconds): {{hour.avgDurationInSeconds}}</p>
         </div>
     </div>
 </div>
