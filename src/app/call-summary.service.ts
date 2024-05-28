@@ -25,7 +25,7 @@ export class CallSummaryService {
 
   constructor(private http: HttpClient) { }
 
-  getCallSummary(date: string ): Observable<CallSummary> {
+  getCallSummary(date: string): Observable<CallSummary> {
     return this.http.get<CallSummary>(`${this.apiUrl}?date=${date}`);
   }
 }

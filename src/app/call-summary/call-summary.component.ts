@@ -21,7 +21,7 @@ interface HourlySummary {
 @Component({
   selector: 'app-call-summary',
   standalone: true,
-  imports: [CommonModule, FormsModule ],
+  imports: [CommonModule, FormsModule],
   templateUrl: './call-summary.component.html',
   styleUrl: './call-summary.component.scss'
 })
